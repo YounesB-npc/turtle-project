@@ -1,3 +1,8 @@
+#Younes Bakir
+#9/15/25
+#MSPaint Ripoff
+#Extra: Color shifting line
+
 import turtle
 import keyboard
 
@@ -20,9 +25,9 @@ def right():
 def movement():
     pass
 s.listen()
-s.onkey(up, 'w')
-s.onkey(down, 's')
-s.onkey(left, 'a')
-s.onkey(right, 'd')
+s.onkey(up, 'w') #Go up if w is pressed
+s.onkey(down, 's') #Go down if s is pressed
+s.onkey(left, 'a') #Go left if a is pressed
+s.onkey(right, 'd') #Go right if d is pressed
 
 turtle.done()
