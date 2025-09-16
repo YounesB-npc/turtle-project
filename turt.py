@@ -4,7 +4,6 @@
 #Extra: Color shifting line
 
 import turtle
-import keyboard
 import colorsys
 
 hue = 0
@@ -19,8 +18,8 @@ def set_turtle_color():
     t.pencolor(rgb)
 
     #Increment hue 
-    hue += 0.01
-        if hue >= 1:
+    hue += 0.03
+    if hue >= 1:
             hue = 0
 
 t = turtle.Turtle()
@@ -37,18 +36,18 @@ def down():
 
 def left():
     set_turtle_color()
-    t.left(50)
+    t.left(45)
 
 def right():
     set_turtle_color()
-    t.right(50)
+    t.right(45)
 
 def movement():
     pass
 s.listen()
 s.onkey(up, 'w') #Go up if w is pressed
 s.onkey(down, 's') #Go down if s is pressed
-s.onkey(left, 'a') #Go left if a is pressed
-s.onkey(right, 'd') #Go right if d is pressed
+s.onkey(left, 'a') #Rotate if a is pressed
+s.onkey(right, 'd') #Rotate if d is pressed
 
 turtle.done()
