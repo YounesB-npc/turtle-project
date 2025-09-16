@@ -1,26 +1,47 @@
 #Younes Bakir
 #9/15/25
-#MSPaint Ripoff
+#Turtle Project: MSPaint Ripoff
 #Extra: Color shifting line
 
 import turtle
 import keyboard
+import colorsys
+
+hue = 0
+
+def set_turtle_color():
+    global hue
+
+    #HSV to RGB converter, and if colorsys returns values in [0,1] then we multiply that value by 255
+    rgb = colorsys.hsv_to_rgb(hue, 1, 1) 
+
+    #Set pen color, the values are expected in [0,1]
+    t.pencolor(rgb)
+
+    #Increment hue 
+    hue += 0.01
+        if hue >= 1:
+            hue = 0
 
 t = turtle.Turtle()
 s = turtle.Screen()
 turtle.bgcolor('lightgray')
 
 def up():
-    t.forward(100)
+    set_turtle_color()
+    t.forward(50)
 
 def down():
-    t.backward(100)
+    set_turtle_color()
+    t.backward(50)
 
 def left():
-    t.left(100)
+    set_turtle_color()
+    t.left(50)
 
 def right():
-    t.right(100)
+    set_turtle_color()
+    t.right(50)
 
 def movement():
     pass
