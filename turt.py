@@ -16,7 +16,7 @@ def set_turtle_color():
     #HSV to RGB converter
     rgb = colorsys.hsv_to_rgb(hue, 1, 1) 
 
-    #Set pen color, the values are expected in [0,1]
+    #Set pen color
     t.pencolor(rgb)
 
     #Increment hue 
@@ -72,3 +72,4 @@ s.onkey(left, 'a') #Rotate if a is pressed
 s.onkey(right, 'd') #Rotate if d is pressed
 
 turtle.done()
+
