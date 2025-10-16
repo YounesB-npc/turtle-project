@@ -8,6 +8,7 @@ import turtle
 import colorsys
 
 hue = 0
+rad = 0
 
 #This function will set up our color shift
 def set_turtle_color():
@@ -54,6 +55,21 @@ def penDecrease():
     current_size = t.pensize()
     new_size = t.pensize(current_size - 1)
     t.pensize(new_size)
+ 
+def circle():
+    t.begin_fill()
+    t.circle(rad)
+    t.end_fill()
+
+def radiusInc():
+    current_radius = rad
+    new_radius = t.circle(rad + 5)
+    t.circle(rad)
+
+def radiusDec():
+    current_radius = rad
+    new_radius = t.circle(rad - 5)
+    t.circle(rad)
 
 #Controls pensize adjustments
 def pensize():
@@ -71,5 +87,9 @@ s.onkey(down, 's') #Go down if s is pressed
 s.onkey(left, 'a') #Rotate if a is pressed
 s.onkey(right, 'd') #Rotate if d is pressed
 
+def radiusControl():
+    pass
+s.listen()
+s.onscreenclick(radiusInc, 1)
+s.onscreenclick(radiusDec, 3)
 turtle.done()
-
